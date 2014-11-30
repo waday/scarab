@@ -7,6 +7,7 @@ class StockListLoader
     @stock_list = File.readlines(stock_list_file).map do |line|
       line.split(",")
     end
+    stock_info
   end
 
   def stock_info
@@ -21,6 +22,10 @@ class StockListLoader
 
   def market_sections
     @market_sections ||= @stock_info.map {|info| info[:market_section]}
+  end
+
+  def units
+    @units ||= @stock_info.map {|info| info[:unit]}
   end
 
   def filter_by_market_section(*sections)
