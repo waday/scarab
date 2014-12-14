@@ -21,7 +21,7 @@ class Entry < Rule
               entry_time: entry_time)
   end
 
-  def entry_long(index, price, entry_time)
+  def enter_long(index, price, entry_time)
     enter(index, price, :long, entry_time)
   end
 

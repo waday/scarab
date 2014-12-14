@@ -2,7 +2,7 @@ require "./lib/trade"
 require "./lib/tick"
 
 class Rule
-  attr_writer :stock
+  attr_accessor :stock
 
   def calculate_indicators; end
 
