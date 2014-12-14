@@ -14,12 +14,16 @@ class EstrangementEntry < Entry
   end
 
   def check_long(index)
+    #p "called: check_long"
+    #p @estrangement[index - 1]
     if @estrangement[index - 1] < (-1) * @rate
       enter_long(index, @stock.open_prices[index], :open)
     end
   end
 
   def check_short(index)
+    #p "called: check_short"
+    #p @estrangement[index - 1]
     if @estrangement[index -1] > @rate
       enter_short(index, @stock.open_prices[index], :open)
     end

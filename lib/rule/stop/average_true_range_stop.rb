@@ -30,5 +30,4 @@ class AverageTrueRangeStop < Stop
   def range(index)
     @average_true_range[index - 1] * @ratio
   end
-end_
-
+end
